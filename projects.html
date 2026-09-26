@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soggal1ng — projects</title>
+<meta name="description" content="Projects by soggal1ng: a custom Linux distro, a self-hosted homelab, a custom IPTV system, and a handful of batch-scripted tools.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23120f0c'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23ffb100' font-family='monospace'%3E%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="prompt"><strong>soggal1ng</strong>@web:~$<span class="cursor-blink">&nbsp;</span></span>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">home</a>
+        <a href="projects.html" aria-current="page">projects</a>
+        <a href="about.html">about</a>
+        <a href="connect.html">connect</a>
+      </nav>
+      <span class="clock"><span class="dot"></span><span id="clock-time">00:00:00</span></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <section class="intro">
+        <div class="section-head">
+          <h1>projects</h1>
+          <span class="path">ls -la<span class="amber"> ~/projects</span></span>
+        </div>
+        <p class="lede">Everything below got built because something existing didn't do quite what was wanted — a subscription, a monitoring tool, a stock IPTV app. Click a project to open its full README.</p>
+      </section>
+
+      <section aria-labelledby="list-head">
+        <h2 id="list-head" class="sr-only" style="position:absolute;left:-9999px;">Full project list</h2>
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">all</button>
+          <button class="filter-btn" data-filter="systems" aria-pressed="false">systems</button>
+          <button class="filter-btn" data-filter="self-hosted" aria-pressed="false">self-hosted</button>
+          <button class="filter-btn" data-filter="scripting" aria-pressed="false">scripting</button>
+          <button class="filter-btn" data-filter="apps" aria-pressed="false">apps</button>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>soggal1ng · built by hand, no framework</span>
+      <span><a href="connect.html">connect</a></span>
+    </div>
+  </footer>
+</div>
+
+<div class="modal-backdrop" id="modal-backdrop" data-open="false" role="dialog" aria-modal="true" aria-label="Project detail">
+  <div class="modal">
+    <div class="modal-titlebar">
+      <span>less ~/projects/README.md</span>
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div id="cmdbar" data-collapsed="true">
+  <button id="cmdbar-toggle" class="cmdbar-toggle"><strong>_</strong> terminal — type "help"</button>
+  <div class="cmdbar-input-row">
+    <span class="prefix">$</span>
+    <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-label="Command input">
+  </div>
+  <div id="cmd-output" aria-live="polite"></div>
+</div>
+
+<script src="js/matrix.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>

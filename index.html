@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soggal1ng — home</title>
+<meta name="description" content="soggal1ng — scripts, self-hosted systems, and one custom Linux distro that refuses to be finished.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23120f0c'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23ffb100' font-family='monospace'%3E%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+
+<div id="boot" aria-hidden="true">
+  <div id="boot-log"></div>
+  <p id="boot-skip"></p>
+</div>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="prompt"><strong>soggal1ng</strong>@web:~$<span class="cursor-blink">&nbsp;</span></span>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html" aria-current="page">home</a>
+        <a href="projects.html">projects</a>
+        <a href="about.html">about</a>
+        <a href="connect.html">connect</a>
+      </nav>
+      <span class="clock"><span class="dot"></span><span id="clock-time">00:00:00</span></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <section class="hero">
+        <pre class="banner" aria-hidden="true">╔═══════════════════════════════════╗
+║                                     ║
+║          S O G G A L 1 N G         ║
+║                                     ║
+╚═══════════════════════════════════╝</pre>
+
+        <p class="tagline glow">Command-line tinkerer. Builds the tool instead of paying for the subscription.</p>
+        <p class="lede">Batch scripts, a homelab running on hardware that should've been recycled, and a Linux distro built from a Debian base that's somehow still not finished. This is what came out of it.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="projects.html">view projects</a>
+          <a class="btn" href="about.html">about me</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="monitor-head">
+        <div class="section-head">
+          <h2 id="monitor-head">system.monitor</h2>
+          <span class="path">~/about<span class="amber">#skills</span></span>
+        </div>
+        <div class="card">
+          <div class="meter-row">
+            <span class="label">Batch Scripting</span>
+            <span class="meter" aria-hidden="true">
+              <i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i>
+            </span>
+            <span class="status">fluent</span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Linux / Debian</span>
+            <span class="meter" aria-hidden="true">
+              <i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i class="on hot"></i><i></i><i></i>
+            </span>
+            <span class="status">shipped a distro</span>
+          </div>
+          <div class="meter-row">
+            <span class="label">PowerShell</span>
+            <span class="meter" aria-hidden="true">
+              <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i>
+            </span>
+            <span class="status">learning</span>
+          </div>
+          <div class="meter-row">
+            <span class="label">C# / .NET</span>
+            <span class="meter" aria-hidden="true">
+              <i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </span>
+            <span class="status">learning, the hard way</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="featured-head">
+        <div class="section-head">
+          <h2 id="featured-head">recent builds</h2>
+          <span class="path">~/projects</span>
+        </div>
+        <div class="project-grid">
+          <article class="card">
+            <div class="row1">
+              <h3>AntOS</h3>
+              <span class="stat">v2.3 · active build</span>
+            </div>
+            <p class="tagline">A custom Linux distro, built on Debian 12 from the ground up — not forked, assembled.</p>
+          </article>
+          <article class="card">
+            <div class="row1">
+              <h3>Home Server</h3>
+              <span class="stat">running 24/7</span>
+            </div>
+            <p class="tagline">A dying laptop, reborn as a Dockerized homelab with a hand-built C# monitoring dashboard.</p>
+          </article>
+          <article class="card">
+            <div class="row1">
+              <h3>Custom IPTV</h3>
+              <span class="stat">in progress</span>
+            </div>
+            <p class="tagline">Turning an owned media library into scheduled, ad-supported "live" channels.</p>
+          </article>
+        </div>
+        <p class="mt-lg"><a href="projects.html">see the full list →</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>soggal1ng · built by hand, no framework</span>
+      <span><a href="connect.html">connect</a></span>
+    </div>
+  </footer>
+</div>
+
+<div id="cmdbar" data-collapsed="true">
+  <button id="cmdbar-toggle" class="cmdbar-toggle"><strong>_</strong> terminal — type "help"</button>
+  <div class="cmdbar-input-row">
+    <span class="prefix">$</span>
+    <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-label="Command input">
+  </div>
+  <div id="cmd-output" aria-live="polite"></div>
+</div>
+
+<script src="js/matrix.js"></script>
+<script src="js/boot.js"></script>
+<script src="js/terminal.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soggal1ng — connect</title>
+<meta name="description" content="Get in touch with soggal1ng — Sogga CLI's Discord community and other places to connect.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23120f0c'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23ffb100' font-family='monospace'%3E%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="prompt"><strong>soggal1ng</strong>@web:~$<span class="cursor-blink">&nbsp;</span></span>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">home</a>
+        <a href="projects.html">projects</a>
+        <a href="about.html">about</a>
+        <a href="connect.html" aria-current="page">connect</a>
+      </nav>
+      <span class="clock"><span class="dot"></span><span id="clock-time">00:00:00</span></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <section class="intro">
+        <div class="section-head">
+          <h1>connect</h1>
+          <span class="path">ping<span class="amber"> soggal1ng</span></span>
+        </div>
+        <p class="lede">No inbox to check here — the most active place is the Discord built around Sogga CLI. Everything else below is a placeholder, waiting to be pointed at a real profile.</p>
+      </section>
+
+      <section aria-label="Connect options">
+        <div class="connect-grid">
+          <div class="connect-card">
+            <h3>Sogga CLI Discord</h3>
+            <p>The community built around the batch-scripted CLI project — bugs, ideas, and menu option suggestions welcome.</p>
+            <a class="btn primary" href="https://discord.gg/29uepW58st" target="_blank" rel="noopener">join the discord</a>
+          </div>
+          <div class="connect-card">
+            <h3>Terminal</h3>
+            <p>This whole site has one built in. Open it with the tab at the bottom of the screen and type <span class="glow-teal">help</span>.</p>
+            <button class="btn" id="connect-open-term">open terminal</button>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="config-head">
+        <div class="section-head">
+          <h2 id="config-head">profiles</h2>
+          <span class="path">cat<span class="amber"> ~/.config/links.json</span></span>
+        </div>
+        <div class="termwin">
+          <div class="bar">
+            <span></span><span></span><span></span>
+            <span class="title">links.json</span>
+          </div>
+          <div class="body config-block">
+<span class="punc">{</span>
+  <span class="key">"discord"</span><span class="punc">:</span> <span class="str">"discord.gg/29uepW58st"</span><span class="punc">,</span>
+  <span class="key">"github"</span><span class="punc">:</span>  <span class="todo">https://github.com/soggal1ng</span>
+  <span class="key">"socials"</span><span class="punc">:</span> <span class="todo">https://youtube.com/soggal1ng</span>
+<span class="punc">}</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>soggal1ng · built by hand, no framework</span>
+      <span><a href="index.html">back to home</a></span>
+    </div>
+  </footer>
+</div>
+
+<div id="cmdbar" data-collapsed="true">
+  <button id="cmdbar-toggle" class="cmdbar-toggle"><strong>_</strong> terminal — type "help"</button>
+  <div class="cmdbar-input-row">
+    <span class="prefix">$</span>
+    <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-label="Command input">
+  </div>
+  <div id="cmd-output" aria-live="polite"></div>
+</div>
+
+<script src="js/matrix.js"></script>
+<script src="js/terminal.js"></script>
+<script>
+  var openTermBtn = document.getElementById('connect-open-term');
+  if (openTermBtn) {
+    openTermBtn.addEventListener('click', function () {
+      var bar = document.getElementById('cmdbar');
+      bar.setAttribute('data-collapsed', 'false');
+      document.getElementById('cmd-input').focus();
+    });
+  }
+</script>
+</body>
+</html>

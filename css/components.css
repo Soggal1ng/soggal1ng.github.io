@@ -1,0 +1,104 @@
+/* ---------- page intro blocks (about / connect / projects headers) ---------- */
+
+.intro {
+  max-width: 62ch;
+}
+.intro .lede { color: var(--fg-dim); }
+
+/* ---------- timeline (about: learning path) ---------- */
+
+.timeline {
+  border-left: 1px solid var(--border);
+  margin-left: 0.4rem;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 1.6rem;
+}
+.timeline .step {
+  position: relative;
+}
+.timeline .step::before {
+  content: '';
+  position: absolute;
+  left: -1.65rem;
+  top: 0.35rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--teal-dim);
+}
+.timeline .step.active::before {
+  border-color: var(--amber);
+  background: var(--amber);
+  box-shadow: 0 0 8px rgba(255, 177, 0, 0.5);
+}
+.timeline .step .when {
+  font-size: 0.72rem;
+  color: var(--fg-faint);
+  text-transform: lowercase;
+}
+.timeline .step h3 { font-size: 1rem; margin-top: 0.15rem; }
+.timeline .step p { color: var(--fg-dim); font-size: 0.9rem; margin-top: 0.3rem; }
+
+/* ---------- skill matrix grid ---------- */
+
+.skill-groups {
+  display: grid;
+  gap: 1.6rem;
+}
+.skill-group .cat {
+  font-size: 0.72rem;
+  color: var(--fg-faint);
+  margin-bottom: 0.4rem;
+}
+.skill-group .cat .amber { color: var(--amber-dim); }
+
+/* ---------- bio panel ---------- */
+
+.bio-line { display: flex; gap: 0.6rem; margin-bottom: 0.5rem; font-size: 0.92rem; }
+.bio-line .k { color: var(--teal); flex-shrink: 0; }
+.bio-line .v { color: var(--fg); }
+
+/* ---------- connect page ---------- */
+
+.connect-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.connect-card {
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  padding: 1.1rem 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.connect-card h3 { font-size: 0.95rem; color: var(--amber-soft); }
+.connect-card p { color: var(--fg-dim); font-size: 0.85rem; }
+.connect-card .btn { margin-top: 0.3rem; align-self: start; }
+
+.config-block {
+  font-size: 0.86rem;
+  line-height: 1.85;
+  white-space: pre-wrap;
+}
+.config-block .punc { color: var(--fg-faint); }
+.config-block .key { color: var(--teal); }
+.config-block .str { color: var(--amber-soft); }
+.config-block .todo { color: var(--fg-faint); font-style: italic; }
+
+/* ---------- 404-ish empty state ---------- */
+
+.empty-state {
+  border: 1px dashed var(--border);
+  padding: 2.2rem 1.5rem;
+  text-align: left;
+  color: var(--fg-faint);
+  font-size: 0.85rem;
+}
+
+/* ---------- utility ---------- */
+
+.mt-lg { margin-top: 2rem; }
+.small { font-size: 0.82rem; color: var(--fg-dim); }
